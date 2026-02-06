@@ -183,8 +183,8 @@ GlobalData* GlobalData::m_theOriginal = nullptr;
 	{ "CameraPitch",								INI::parseReal,				nullptr,			offsetof( GlobalData, m_cameraPitch ) },
 	{ "CameraYaw",									INI::parseReal,				nullptr,			offsetof( GlobalData, m_cameraYaw ) },
 	{ "CameraHeight",								INI::parseReal,				nullptr,			offsetof( GlobalData, m_cameraHeight ) },
-	{ "MaxCameraHeight",						INI::parseReal,				nullptr,			offsetof( GlobalData, m_maxCameraHeight ) },
-	{ "MinCameraHeight",						INI::parseReal,				nullptr,			offsetof( GlobalData, m_minCameraHeight ) },
+	//{ "MaxCameraHeight",						INI::parseReal,				nullptr,			offsetof( GlobalData, m_maxCameraHeight ) },
+	//{ "MinCameraHeight",						INI::parseReal,				nullptr,			offsetof( GlobalData, m_minCameraHeight ) },
 	{ "TerrainHeightAtEdgeOfMap",					INI::parseReal,				nullptr,			offsetof( GlobalData, m_terrainHeightAtEdgeOfMap ) },
 	{ "UnitDamagedThreshold",				INI::parseReal,				nullptr,			offsetof( GlobalData, m_unitDamagedThresh ) },
 	{ "UnitReallyDamagedThreshold",	INI::parseReal,				nullptr,			offsetof( GlobalData, m_unitReallyDamagedThresh ) },
@@ -840,8 +840,8 @@ GlobalData::GlobalData()
 	m_cameraPitch = 0.0f;
 	m_cameraYaw = 0.0f;
 	m_cameraHeight = 0.0f;
-	m_minCameraHeight = 100.0f;
-	m_maxCameraHeight = 300.0f;
+	m_minCameraHeight = 250.0f;
+	m_maxCameraHeight = 500.0f;
 	m_terrainHeightAtEdgeOfMap = 0.0f;
 
 	m_unitDamagedThresh = 0.5f;

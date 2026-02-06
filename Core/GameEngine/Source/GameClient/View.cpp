@@ -70,7 +70,7 @@ View::View( void )
 	m_id = m_idNext++;
 
 	// default field of view
-	m_FOV = DEG_TO_RADF(50.0f);
+	m_FOV = DEG_TO_RADF(120.0f);
 
 	m_mouseLocked = FALSE;
 
@@ -96,6 +96,7 @@ void View::init( void )
 	m_zoomLimited = TRUE;
 
 	m_zoom = 1.0f;
+	// todo set the values here is how we increase the size
 	m_maxHeightAboveGround = TheGlobalData->m_maxCameraHeight;
 	m_minHeightAboveGround = TheGlobalData->m_minCameraHeight;
 	m_okToAdjustHeight = FALSE;
