@@ -131,6 +131,20 @@ Int parseNoMusic(char *args[], int)
 	return 1;
 }
 
+Int parseFPSLimit(char* args[], int num)
+{
+	if (num > 1)
+	{
+		TheWritableGlobalData->m_framesPerSecondLimit = atoi(args[1]);
+	}
+	return 2;
+}
+Int parseLogicTimeScale(char* args[], int num)
+{
+	TheWritableGlobalData->m_enableLogicTimeScale = TRUE;
+	return 1;
+}
+
 
 //=============================================================================
 //=============================================================================
@@ -1179,6 +1193,9 @@ static CommandLineParam paramsForEngineInit[] =
 	{ "-noshaders", parseNoShaders },
 	{ "-quickstart", parseQuickStart },
 	{ "-useWaveEditor", parseUseWaveEditor },
+	{ "-noFPSLimit", parseNoFPSLimit },
+	{ "-fps", parseFPSLimit },
+	{ "-logicTimeScale", parseLogicTimeScale },
 
 	// TheSuperHackers @feature xezon 03/08/2025 Force full viewport for 'Control Bar Pro' Addons like GenTool did it.
 	{ "-forcefullviewport", parseFullViewport },
