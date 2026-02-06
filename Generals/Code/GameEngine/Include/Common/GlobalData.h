@@ -113,6 +113,7 @@ public:
 	Bool m_useHeatEffects;
 	Bool m_useFpsLimit;
 	Bool m_dumpAssetUsage;
+	Bool m_enableLogicTimeScale;
 	Int m_framesPerSecondLimit;
 	Int	m_chipSetType;	///<See W3DShaderManager::ChipsetType for options
 
